@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 15px 25px;
+    background-color: #fff;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logotext {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logoheader {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+.navbutton:disabled {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    background-color: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.navbutton {
+    height: 40px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbutton:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.rozvrh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+#tridy{ 
+    width: 90%;
+    max-width: 900px;  
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 4px 6px -2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px; 
+    background-color: #fff; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.trida{
+    width: 100%;
+}
+
+#tridy .trida {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+   
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+#tridy .trida:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    font-size: 25px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
