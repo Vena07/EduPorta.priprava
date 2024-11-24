@@ -5,12 +5,14 @@ body {
     background-color: #f4f4f4;
 }
 
+/*Header*/
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    padding: 15px 25px;
+    padding: 15px;
     background-color: #fff;
 }
 
@@ -59,6 +61,11 @@ nav {
     background-color: #0056b3;
 }
 
+
+
+
+/*Rozvrh*/
+
 .rozvrh {
     display: flex;
     justify-content: center;
@@ -82,23 +89,14 @@ nav {
     gap: 10px;
 }
 
-.trida{
-    width: 100%;
-}
-
 #tridy .trida {
     padding: 10px;
     cursor: pointer;
     background-color: #007bff;
     color: white;
-   
     border-radius: 5px;
     text-align: center;
     
-}
-
-#tridy .trida:hover {
-    background-color: #0056b3;
 }
 
 table {
@@ -128,3 +126,57 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #ddd;
 }
+
+td:hover{
+    background-color: #77899d;
+}
+
+
+#form{
+    position: absolute;
+    display: none;
+    width: 90%;
+    max-width: 300px;  
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 4px 6px -2px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px; 
+    background-color: #fff; 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group select, .form-group button {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/*Známky*/

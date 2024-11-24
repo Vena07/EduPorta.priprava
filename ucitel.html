@@ -14,23 +14,24 @@
             <p class="logotext">EduPortal</p>
         </div>    
         <nav>
-            <button type="disable" class="navbutton" disabled>Rozvrh</button>
-            <button class="navbutton">Známky</button>
-            <button class="navbutton">Absence</button>
+            <button type="disable" class="navbutton" id="rozvrh" onclick="zavrit(1)">Rozvrh</button>
+            <button  id="znamky" class="navbutton" onclick="zavrit(2)">Známky</button>
+            <button  id="absence" class="navbutton" onclick="zavrit(3)">Absence</button>
         </nav>
     </header>
+    
     <div class="rozvrh">
         <div id="tridy">
-            <p class="trida">1.A</p>
-            <p class="trida">2.A</p>
-            <p class="trida">3.A</p>
-            <p class="trida">4.A</p>
-            <p class="trida">5.A</p> 
+            <button class="navbutton" id="1.A" onclick="zmena(1)">1.A</button>
+            <button class="navbutton" id="2.A" onclick="zmena(2)">2.A</button>
+            <button class="navbutton" id="3.A" onclick="zmena(3)">3.A</button>
+            <button class="navbutton" id="4.A" onclick="zmena(4)">4.A</button>
+            <button class="navbutton" id="5.A" onclick="zmena(5)">5.A</button> 
         </div>
         <div id="rozvrh">
             <table>
                 <tr>
-                    <th>Čas</th>
+                    <th >Čas</th>
                     <th>Pondělí</th>
                     <th>Úterý</th>
                     <th>Středa</th>
@@ -39,46 +40,83 @@
                 </tr>
                 <tr>
                     <td>8:00 - 9:00</td>
-                    <td>Matematika</td>
-                    <td>Angličtina</td>
-                    <td>Fyzika</td>
-                    <td>Český jazyk</td>
-                    <td>Dějepis</td>
+                    <td onclick="otevrit(this)">Matematika</td>
+                    <td onclick="otevrit(this)">Angličtina</td>
+                    <td onclick="otevrit(this)">Fyzika</td>
+                    <td onclick="otevrit(this)">Český jazyk</td>
+                    <td onclick="otevrit(this)">Dějepis</td>
                 </tr>
                 <tr>
                     <td>9:10 - 10:10</td>
-                    <td>Biologie</td>
-                    <td>Matematika</td>
-                    <td>Angličtina</td>
-                    <td>Geografie</td>
-                    <td>Fyzika</td>
+                    <td onclick="otevrit(this)">Biologie</td>
+                    <td onclick="otevrit(this)">Matematika</td>
+                    <td onclick="otevrit(this)">Angličtina</td>
+                    <td onclick="otevrit(this)">Geografie</td>
+                    <td onclick="otevrit(this)">Fyzika</td>
                 </tr>
                 <tr>
                     <td>10:20 - 11:20</td>
-                    <td>Český jazyk</td>
-                    <td>Biologie</td>
-                    <td>Dějepis</td>
-                    <td>Matematika</td>
-                    <td>Hudební výchova</td>
+                    <td onclick="otevrit(this)">Český jazyk</td>
+                    <td onclick="otevrit(this)">Biologie</td>
+                    <td onclick="otevrit(this)">Dějepis</td>
+                    <td onclick="otevrit(this)">Matematika</td>
+                    <td onclick="otevrit(this)">Hudební výchova</td>
                 </tr>
                 <tr>
                     <td>11:30 - 12:30</td>
-                    <td>Geografie</td>
-                    <td>Fyzika</td>
-                    <td>Angličtina</td>
-                    <td>Biologie</td>
-                    <td>Tělesná výchova</td>
+                    <td onclick="otevrit(this)">Geografie</td>
+                    <td onclick="otevrit(this)">Fyzika</td>
+                    <td onclick="otevrit(this)">Angličtina</td>
+                    <td onclick="otevrit(this)">Biologie</td>
+                    <td onclick="otevrit(this)">Tělesná výchova</td>
                 </tr>
                 <tr>
                     <td>12:40 - 13:40</td>
-                    <td>Informatika</td>
-                    <td>Český jazyk</td>
-                    <td>Hudební výchova</td>
-                    <td>Angličtina</td>
-                    <td>Matematika</td>
-                </tr>
+                    <td onclick="otevrit(this)">Informatika</td>
+                    <td onclick="otevrit(this)">Český jazyk</td>
+                    <td onclick="otevrit(this)">Hudební výchova</td>
+                    <td onclick="otevrit(this)">Angličtina</td>
+                    <td onclick="otevrit(this)">Matematika</td>
+                </tr>                       
             </table>
         </div>
+     
+        <div id="form">
+            <div class="form-group">
+                <label for="subjectSelect">Vyberte Předmět:</label>
+                <select id="subjectSelect">
+                    <option value="Matematika">Matematika</option>
+                    <option value="Angličtina">Angličtina</option>
+                    <option value="Fyzika">Fyzika</option>
+                    <option value="Český jazyk">Český jazyk</option>
+                    <option value="Dějepis">Dějepis</option>
+                    <option value="Biologie">Biologie</option>
+                    <option value="Geografie">Geografie</option>
+                    <option value="Hudební výchova">Hudební výchova</option>
+                    <option value="Tělesná výchova">Tělesná výchova</option>
+                    <option value="Informatika">Informatika</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button id="saveButton" onclick="save()">Uložit</button>
+            </div>
+
+            <div class="form-group">
+                <button id="closeButton" onclick="closeForm()">× Ukončit</button>
+            </div>
+        </div>
     </div>
+
+
+    <div class="znamky">
+
+    </div>
+
+    <div class="Absence">
+        
+    </div>
+
+    <script src="funkce.js"></script>
 </body>
 </html>
