@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="vzhled.css">
 </head>
 <body>
+    
     <header>
         <div class="logoheader">
             <img class="logo" src="Obrazky/ikona.png" alt="EduPortal Logo">
@@ -20,7 +21,8 @@
         </nav>
     </header>
     
-    <div class="rozvrh">
+    <div id="rozvrhstr">
+        
         <div id="tridy">
             <button class="navbutton" id="1.A" onclick="zmena(1)">1.A</button>
             <button class="navbutton" id="2.A" onclick="zmena(2)">2.A</button>
@@ -28,6 +30,7 @@
             <button class="navbutton" id="4.A" onclick="zmena(4)">4.A</button>
             <button class="navbutton" id="5.A" onclick="zmena(5)">5.A</button> 
         </div>
+        
         <div id="rozvrh">
             <table>
                 <tr>
@@ -103,18 +106,74 @@
             </div>
 
             <div class="form-group">
-                <button id="closeButton" onclick="closeForm()">× Ukončit</button>
+                <button id="closeButton" onclick="closeForm()">Zavřít</button>
             </div>
         </div>
     </div>
 
 
-    <div class="znamky">
-
+    <div id="znamkystr">
+        <p>Tady nic nehledej :P</p>
     </div>
 
-    <div class="Absence">
+    <div id="absencestr">
+    
         
+        <div class="container">
+            <div class="form-group">
+                <label for="classSelect">Vyberte Třídu:</label>
+                <select id="classSelect">
+                    <option value="1.A">1.A</option>
+                    <option value="2.A">2.A</option>
+                    <option value="3.A">3.A</option>
+                    <option value="4.A">4.A</option>
+                    <option value="5.A">5.A</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="studentSelect">Vyberte Studenta:</label>
+                <select id="studentSelect">
+                    <option value="Jan Novák">Jan Novák</option>
+                    <option value="Anna Dvořáková">Anna Dvořáková</option>
+                    <option value="Petra Svobodová">Petra Svobodová</option>
+                    <option value="Martin Procházka">Martin Procházka</option>
+                    <option value="Lukáš Veselý">Lukáš Veselý</option>
+                </select>
+            </div>
+
+            <button class="btn" onclick="otevritAbsenciForm()">Přidat Absenci</button>
+        </div>
+
+        <!-- -->
+        <div class="table-container">
+            <table id="absenceTable">
+                <tr>
+                    <th>Čas</th>
+                    <th>Omluvená</th>
+                </tr>
+                <tr>
+                    <td>2024-11-06 | 10:00 - 11:00</td>
+                    <td class="absence-green">Omluvená</td>
+                </tr>
+                <tr>
+                    <td>2024-11-06 | 11:00 - 12:00</td>
+                    <td class="absence-red">Neomluvená</td>
+                </tr>
+            </table>
+        </div>
+
+        <!--  -->
+        <div id="absenceForm" class="modal">
+            <label for="absenceDate">Datum:</label>
+            <input type="date" id="absenceDate">
+            <label for="absenceHour">Hodina:</label>
+            <input type="text" id="absenceHour" placeholder="např. 10:00 - 11:00">
+            <label for="isExcused">Omluvená:</label>
+            <input type="checkbox" id="isExcused">
+            <button class="btn" onclick="pridatAbsenci()">Uložit</button>
+            <button class="btn" onclick="zavritAbsenci()">Zavřit</button>
+        </div>
     </div>
 
     <script src="funkce.js"></script>
