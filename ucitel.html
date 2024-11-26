@@ -23,6 +23,7 @@
     
     <div id="rozvrhstr">
         
+        <!-- Výběr třídy -->
         <div id="tridy">
             <button class="navbutton" id="1.A" onclick="zmena(1)">1.A</button>
             <button class="navbutton" id="2.A" onclick="zmena(2)">2.A</button>
@@ -31,6 +32,7 @@
             <button class="navbutton" id="5.A" onclick="zmena(5)">5.A</button> 
         </div>
         
+        <!-- Rozvrh tříd -->
         <div id="rozvrh">
             <table>
                 <tr>
@@ -84,6 +86,7 @@
             </table>
         </div>
      
+        <!-- Změna v rozvrhu-->
         <div id="form">
             <div class="form-group">
                 <label for="subjectSelect">Vyberte Předmět:</label>
@@ -98,6 +101,7 @@
                     <option value="Hudební výchova">Hudební výchova</option>
                     <option value="Tělesná výchova">Tělesná výchova</option>
                     <option value="Informatika">Informatika</option>
+                    <option value="Volno">Volno</option>
                 </select>
             </div>
 
@@ -111,14 +115,15 @@
         </div>
     </div>
 
-
+    <!-- tady zatím nic -->
     <div id="znamkystr">
         <p>Tady nic nehledej :P</p>
     </div>
 
+    <!-- absence -->
     <div id="absencestr">
     
-        
+        <!-- výběr tříd-->
         <div class="container">
             <div class="form-group">
                 <label for="classSelect">Vyberte Třídu:</label>
@@ -131,6 +136,7 @@
                 </select>
             </div>
 
+            <!-- Studenti v třídě -->
             <div class="form-group">
                 <label for="studentSelect">Vyberte Studenta:</label>
                 <select id="studentSelect">
@@ -145,7 +151,7 @@
             <button class="btn" onclick="otevritAbsenciForm()">Přidat Absenci</button>
         </div>
 
-        <!-- -->
+        <!-- tabulka s absencí -->
         <div class="table-container">
             <table id="absenceTable">
                 <tr>
@@ -163,7 +169,7 @@
             </table>
         </div>
 
-        <!--  -->
+        <!-- Vytvoření absence -->
         <div id="absenceForm" class="modal">
             <label for="absenceDate">Datum:</label>
             <input type="date" id="absenceDate">
